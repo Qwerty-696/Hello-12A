@@ -1,28 +1,45 @@
+/* Saýt fony */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   text-align: center;
-  background: #f0f8ff;
-  margin-top: 50px;
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 50px 0;
 }
 
+/* Baş sahypa h1 */
 h1 {
-  color: darkblue;
-  text-shadow: 1px 1px 2px #888;
+  color: #ff6b81;
+  text-shadow: 2px 2px 5px #555;
+  font-size: 48px;
 }
 
+/* Paragraf p */
+p {
+  font-size: 20px;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Düwmä stil we animasiýa */
 button {
-  padding: 12px 25px;
-  background: darkblue;
+  padding: 15px 30px;
+  background: #ff6b81;
   color: white;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-size: 16px;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: navy;
-  transform: scale(1.05);
-  transition: 0.2s;
+  transform: scale(1.1) rotate(5deg);
+  background: #ff4757;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Body-de üýtgeýän effekt */
+body.transition {
+  transition: background 0.5s ease;
 }
