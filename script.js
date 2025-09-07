@@ -1,6 +1,6 @@
 // Düwmä basanyňda alert görkez we fon üýtget
 document.getElementById("btn").onclick = function() {
-  alert("Salam, Dünýä! 🌍 Düwmä basdyň!");
+  alert("Salam, Gowmy Klasdaş 😊");
   
   // Body elementini alyp fon üýtgetmek
   const body = document.body;
