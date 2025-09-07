@@ -1,44 +1,35 @@
-// Düwmä 1
-const button1 = document.getElementById("btn1");
-if (button1) {
-  button1.onclick = function() {
-    alert("Salam Gowmy Klasdaş! 🌟");
-    document.body.style.background = "linear-gradient(to right, #f6d365, #fda085)";
-  };
+// 1-nji düwme
+document.getElementById("btn1").addEventListener("click", function() {
+  alert("Üstüne basdyň! ✅");
+  document.body.style.backgroundColor = "#d4edda"; // ýaşyl fon
+  setTimeout(() => document.body.style.backgroundColor = "", 2000); // 2 sekunt soň dolanýar
+});
+
+// 2-nji düwme
+document.getElementById("btn2").addEventListener("click", function() {
+  alert("Men saňa basma diýdim! 🚫");
+  document.body.style.backgroundColor = "#f8d7da"; // gyzyl fon
+  setTimeout(() => document.body.style.backgroundColor = "", 2000);
+});
+
+// 3-nji düwme
+document.getElementById("btn3").addEventListener("click", function() {
+  alert("Waaay, meni basdyň! 😅");
+  document.body.style.backgroundColor = "#ffccff"; // pembe fon
+  setTimeout(() => document.body.style.backgroundColor = "", 2000);
+});
+
+// Sagat we wagt
+function showTime() {
+  let now = new Date();
+  let time = now.toLocaleTimeString("tk-TM", { hour12: false });
+  document.getElementById("clock").innerText = "Türkmenistan wagty: " + time;
 }
+setInterval(showTime, 1000);
+showTime();
 
-// Düwmä 2
-const button2 = document.getElementById("btn2");
-if (button2) {
-  button2.onclick = function() {
-    alert("Basma Diydim Basdyñay! 😂");
-    document.body.style.background = "linear-gradient(to right, #89f7fe, #66a6ff)";
-  };
-}
-
-// Düwmä 3
-const button3 = document.getElementById("btn3");
-if (button3) {
-  button3.onclick = function() {
-    alert("12-nji SYNP WEPA! 🙋🏻‍♂️");
-    document.body.style.background = "linear-gradient(to right, #f6d365, #fda085)";
-  };
-}
-
-// Türkmenistanda wagt görkezmek (UTC+5)
-function updateClock() {
-  const now = new Date();
-  const turkmenTime = new Date(now.getTime() + 5*60*60*1000); // UTC+5
-  const hours = String(turkmenTime.getUTCHours()).padStart(2, '0');
-  const minutes = String(turkmenTime.getUTCMinutes()).padStart(2, '0');
-  const seconds = String(turkmenTime.getUTCSeconds()).padStart(2, '0');
-
-  const clock = document.getElementById("clock");
-  if(clock) {
-    clock.textContent = `Türkmenistan wagty: ${hours}:${minutes}:${seconds}`;
-  }
-}
-
-// Her sekunt täzeläp dur
-setInterval(updateClock, 1000);
-updateClock(); // sahypa açylanda hem görünsün
+// Başlyk basylanda animasiýa
+document.getElementById("title").addEventListener("click", function() {
+  this.style.color = "#" + Math.floor(Math.random()*16777215).toString(16); // reňk üýtget
+  this.style.fontSize = (Math.floor(Math.random() * 10) + 36) + "px"; // font-size üýtget
+});
