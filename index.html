@@ -3,21 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salam 12A</title>
+  <title>Full Interactive Page</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Head içinde goşmaça CSS: ähli ýazgylar reňkli */
-    h1 {
-      color: #ff6b81; /* başlyk reňki */
-      text-shadow: 2px 2px 5px #555;
+    /* Animasiýaly fon */
+    body {
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
     }
+
+    @keyframes gradientBG {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 5px #555;
+      cursor: pointer;
+      transition: all 0.5s ease;
+    }
+
     p {
       font-size: 20px;
-      color: #3333ff; /* pargraf reňki */
+      color: #fff;
       margin: 20px 0;
     }
+
     button {
       padding: 15px 30px;
+      margin: 10px;
       background: #ff6b81;
       color: #fff;
       border-radius: 10px;
@@ -26,26 +47,31 @@
       font-size: 18px;
       transition: all 0.3s ease;
     }
+
     button:hover {
       transform: scale(1.1) rotate(5deg);
       background: #ff4757;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
+
+    #clock {
+      font-size:24px;
+      color:#fff;
+      margin-top:30px;
+      font-weight:bold;
+    }
   </style>
 </head>
 <body>
-  <h1>Hemmäñize Salam! 🎉</h1>
-  <p>Bu meniň saýtym ☺️</p>
-  <!-- Iki sany düwmä -->
-  <button id="btn1">Üstüne Bas✅</button>
-  <br><br>
-  <button id="btn2">Muña Basma🚫</button>
-  <br><br>
-  <button id="btn3">SAYTYN EYESI⚙️</button>
+  <h1 id="title">Hemmäňize Salam! 🎉</h1>
+  <p>Bu meniň interactive saýtym ☺️</p>
 
-  <!-- Türkmenistan wagty üçin -->
-  <p id="clock" style="font-size:24px; color:black; margin-top:30px;"></p>
+  <button id="btn1">Üstüne Bas✅</button>
+  <button id="btn2">Muňa Basma🚫</button>
+  <button id="btn3">Meni bas😅</button>
+
+  <p id="clock"></p>
 
   <script src="script.js"></script>
 </body>
-    </html>
+</html>
