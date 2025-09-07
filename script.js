@@ -16,6 +16,15 @@ if (button2) {
   };
 }
 
+// Düwmä 3
+const button3 = document.getElementById("btn3");
+if (button3) {
+  button3.onclick = function() {
+    alert("12-nji SYNP [★WEPA★] 🙋🏻‍♂️");
+    document.body.style.background = "linear-gradient(to right, #f6d365, #fda085)";
+  };
+}
+
 // Türkmenistanda wagt görkezmek (UTC+5)
 function updateClock() {
   const now = new Date();
